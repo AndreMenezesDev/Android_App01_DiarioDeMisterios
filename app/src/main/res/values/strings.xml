@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TelaPrincipal</string>
+    <string name="intro">O Diário de Mistérios</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Opções</string>
+    <string name="title_activity_menu">menu</string>
+    <string name="title_activity_menu_lateral">Meu Diário</string>
+</resources>
