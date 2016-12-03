@@ -12,5 +12,16 @@
     tools:context="br.example.telaprincipal.Menu_lateral"
     tools:showIn="@layout/app_bar_menu_lateral">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <WebView
+            android:layout_width="match_parent"
+            android:id="@+id/siteWebView"
+            android:layout_gravity="fill"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp"></WebView>
+    </LinearLayout>
 </RelativeLayout>

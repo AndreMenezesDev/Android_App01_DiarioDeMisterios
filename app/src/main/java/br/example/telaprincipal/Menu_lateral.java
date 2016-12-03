@@ -12,15 +12,20 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class Menu_lateral extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private WebView meuSite ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_lateral);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -40,6 +45,13 @@ public class Menu_lateral extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Constrói a área da web e chama o site dentro da webview
+        this.meuSite = (WebView) findViewById(R.id.siteWebView);
+        meuSite.getSettings().setJavaScriptEnabled(true);
+
+        meuSite.loadUrl("http://odiariodemisterios.blogspot.com.br");
+        meuSite.setWebViewClient(new WebViewClient());
     }
 
     @Override
